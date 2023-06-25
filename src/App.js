@@ -1,11 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Data from './/Data.json'
+import Data from './/Game.json'
 import { useState } from 'react';
 import './App.css';
 function App() {
   const[currentpage,setCurrentpage] = useState(1);
-  const recordsperpage =5;
+  const recordsperpage =9;
   const lastindex = currentpage*recordsperpage;
   const firstindex = lastindex-recordsperpage;
   const records = Data.slice(firstindex,lastindex);
@@ -13,25 +13,27 @@ function App() {
   const numbers = [...Array(npages+1).keys()].slice(1);
   return (
  <div> 
-  <table className="table table-striped table-hover" >
+  <table class="table table-dark table-hover" >
     <thead>
     <th>Id</th>
     <th>Name</th>
     <th>Price</th>
-    <th>Brand</th>
-    <th>Stock</th>
-    <th>Rating</th>
+    <th>Company</th>
+    <th>Play Game</th>
+    <th>Buy Game</th>
+    <th>Game Info</th>
     </thead>
     <tbody>
     {records.map((d,i)=>(
     
     <tr key={i}>
       <td>{d.id}</td>
-      <td>{d.title}</td>
-      <td>{d.price}</td>
-      <td>{d.brand}</td>
-      <td>{d.stock}</td>
-      <td>{d.rating}</td>
+      <td>{d.Name}</td>
+      <td>{d.Price}</td>
+      <td>{d.company}</td>
+      <td>{<a href='https://www.xbox.com/en-us/play/gallery/all-games' target='_blanck'><button type="button" class="btn btn-danger" >Play</button></a>}</td>
+      <td>{<a href='https://gamenation.in/'  target='_blanck'><button type="button" class="btn btn-warning">BUY</button></a>}</td>
+      <td>{<a href='https://gamenation.in/'  target='_blanck'><button type="button" class="btn btn-primary">INFO</button></a>}</td>
     </tr>
     ))}
     </tbody>

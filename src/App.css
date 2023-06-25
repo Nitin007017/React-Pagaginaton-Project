@@ -1,3 +1,5 @@
+@import url('https://media.istockphoto.com/id/1411029498/vector/dark-hexagon-gaming-abstract-vector-background-with-blue-and-red-colored-bright-flashes.jpg?s=612x612&w=0&k=20&c=Tmjh-FFiMcGmGtkcqX12AD-qRAUAEoVjKX-qKLWIiGo=');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  background-image: url('https://media.istockphoto.com/id/1411029498/vector/dark-hexagon-gaming-abstract-vector-background-with-blue-and-red-colored-bright-flashes.jpg?s=612x612&w=0&k=20&c=Tmjh-FFiMcGmGtkcqX12AD-qRAUAEoVjKX-qKLWIiGo=');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+th
+{
+color: aliceblue;
+}
+nav{
+margin-left: 34vw;
 }
